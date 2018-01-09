@@ -1,5 +1,6 @@
 package com.example.viniciustenorio.minhacalculadora;
 
+import android.support.test.espresso.Espresso;
 import android.support.test.rule.ActivityTestRule;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -17,8 +18,11 @@ public class MainActivityRobot {
 
     }
 
-    public MainActivityRobot preencheNota1ComValor(String valor){
-        onView(withId(R.id.et_nota1)).perform(typeText(valor));
+    public MainActivityRobot preencheNotas(String n1,String n2,String n3){
+        onView(withId(R.id.et_nota1)).perform(typeText(n1));
+        onView(withId(R.id.et_nota2)).perform(typeText(n2));
+        onView(withId(R.id.et_nota3)).perform(typeText(n3));
+        Espresso.closeSoftKeyboard();
         return this;
     }
 

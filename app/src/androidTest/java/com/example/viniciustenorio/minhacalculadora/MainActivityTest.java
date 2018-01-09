@@ -14,7 +14,7 @@ import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.hasBackground;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import s    tatic android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
  * Created by viniciustenorio on 10/17/17.
@@ -31,9 +31,8 @@ public class MainActivityTest {
 //        onView(withId(R.id.button)).perform(click());
 //        onView(withId(R.id.button)).check(matches(hasBackground(R.color.colorAccent)));
         MainActivityRobot robot = new MainActivityRobot(rule);
-        robot.preencheNota1ComValor("6")
-                .clickCalcular()
-                .checaCorBotao();
+        robot.preencheNotas("6","6","6")
+                .clickCalcular();
 
     }
 }
