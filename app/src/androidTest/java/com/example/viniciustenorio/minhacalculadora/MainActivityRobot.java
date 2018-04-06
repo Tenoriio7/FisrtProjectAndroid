@@ -5,6 +5,7 @@ import android.support.test.rule.ActivityTestRule;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
@@ -27,12 +28,13 @@ public class MainActivityRobot {
     }
 
     public MainActivityRobot clickCalcular(){
-        onView(withId(R.id.button)).perform(click());
+        onView(withId(R.id.btn)).perform(scrollTo());
+        onView(withId(R.id.btn)).perform(click());
         return this;
     }
 
     public MainActivityRobot checaCorBotao(){
-        onView(withId(R.id.button));
+        onView(withId(R.id.btn));
         return this;
     }
 }
