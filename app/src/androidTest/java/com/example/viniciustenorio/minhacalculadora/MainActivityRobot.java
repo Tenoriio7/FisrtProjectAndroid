@@ -2,6 +2,7 @@ package com.example.viniciustenorio.minhacalculadora;
 
 import android.support.test.espresso.Espresso;
 import android.support.test.rule.ActivityTestRule;
+import android.widget.Button;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -34,7 +35,19 @@ public class MainActivityRobot {
     }
 
     public MainActivityRobot checaCorBotao(){
-        onView(withId(R.id.btn));
+        onView(withId(R.id.btn);
+
         return this;
+    }
+
+    public MainActivityRobot checarCorBotao(){
+        Button btn;
+        btn= (Button) btn.findViewById(R.id.btn);
+        if (btn.getDrawingCacheBackgroundColor() == 0xff00ff00){
+            return this;
+        }
+        else{
+            
+        }
     }
 }
